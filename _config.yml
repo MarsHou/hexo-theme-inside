@@ -22,20 +22,21 @@ appearance:
   # 'url(//www.toptal.com/designers/subtlepatterns/patterns/confectionary.png) #f5f7fa'
 
   # Maximum width of content
-  # content_width: 640
+  content_width: 640
 
   # Fonts
   font:
     # Url of font css file
     # Below is a font set containing Baloo Bhaijaan, Josefin Sans, Montserrat and Inconsolata from Google Fonts.
-    url: //fonts.googleapis.com/css?family=Baloo+Bhaijaan|Inconsolata|Josefin+Sans|Montserrat
+    url: //fonts.googleapis.com/css?family=Baloo+Bhaijaan|Inconsolata|Josefin+Sans|Montserrat|Cinzel|Beth+Ellen
 
     # Base font which applied to body
     base: "'Josefin Sans', 'PingFang SC'"
     # Sidebar author font, fallback to `base`
-    logo:
+    logo: 'Beth Ellen'
     # Sidebar menu font, fallback to `base`
-    menu: 'Baloo Bhaijaan'
+    # menu: 'Baloo Bhaijaan'
+    menu: 'Cinzel'
     # Font for:
     # - percentage on the fab button
     # - month text on archives page
@@ -56,7 +57,12 @@ appearance:
   # Uses an architecture called "base16" (https://github.com/chriskempson/base16),
   # the default theme is a customized Atelier Dune Light theme,
   # please feel free to explore more.
-  highlight:
+  highlight: [
+    '#2e2a31', '#4a464d', '#666369', '#838085',
+    '#9f9da2', '#bcbabe', '#d8d7da', '#f5f4f7',
+    '#d8137f', '#d65407', '#dc8a0e', '#17ad98',
+    '#149bda', '#796af5', '#bb60ea', '#c720ca'
+  ]
 
   # Default Light by Chris Kempson (http://chriskempson.com)
   # highlight: [
@@ -86,19 +92,20 @@ appearance:
 profile:
   # `email` is used for gravatar(https://en.gravatar.com),
   # fallback to `hexo.config.email` if not specified
-  email:
+  email: 'houjianchao1204@gmail.com'
 
   # You can set Avatar URL directly
-  # avatar:
+  avatar: images/avatar.jpeg
 
-  bio: Awesome guy.
+  bio: Life is like a road. Recent shortcut is usually the worst road..
 
 # Sidebar navigation links
 menu:
-  Home: /
+  🏠 Home: /
+  🔍 Search: /search
   # About: /about
   # Links: /links
-  # Github: https://github.com/username
+  # Github: https://github.com/MarsHou
 
 # Social media URL
 # Try to sort by changing the order of the keys
@@ -108,7 +115,7 @@ sns:
   # If you use hexo-generator-feed, `sns.feed` can be left blank
   # and the theme will try to get `hexo.config.feed.path`.
   feed:
-  github:
+  github: https://github.com/MarsHou
   twitter:
   facebook:
   instagram:
@@ -127,13 +134,13 @@ sns:
 # Sidebar footer copyright info
 footer:
   # Set to false to hide.
-  # copyright: '&copy; 2019 • <a href="">John Doe</a>'
+  copyright: '&copy; 2017 • <a href="http://marshou.github.io">Mars Hou</a>'
 
   # Set to false to hide Hexo link.
-  # powered: false
+  powered: false
 
   # Set to false to hide theme link.
-  # theme: false
+  theme: false
 
   # Custom text.
   # custom: Hosted by <a target="_blank" rel="external nofollow"
@@ -147,13 +154,13 @@ footer:
 # Page
 page:
   # Display Table of content, default to `true`
-  # toc: false
+  toc: true
 
   # Display reward, default to `false`
-  # reward: true
+  reward: true
 
   # Display copyright notice, default to `false`
-  # copyright: true
+  copyright: true
 
 
 # Post
@@ -161,9 +168,9 @@ post:
   # per_page: 10
 
   # The following settings are the same as the page
-  # toc: false
-  # reward: true
-  # copyright: true
+  toc: true
+  reward: true
+  copyright: true
 
 # Archive
 archive:
@@ -180,18 +187,18 @@ category:
 # Search
 search:
   # Display a quick search button in fab
-  # fab: true
+  fab: true
 
   # Render a standalone searh page which can be configured in sidebar menu such as `Search: /search`
-  # page: true
+  page: true
 
   # Local search
-  # adapter:
-  #   range:
-  #     - post
-  #     - page
-  #   per_page: 20
-  #   limit: 10000
+  adapter:
+    range:
+      - post
+      - page
+    per_page: 20
+    limit: 10000
 
   # Custom search
   # adapter:
@@ -247,31 +254,34 @@ toc:
 # Reward
 reward:
   # Text which shows at the top.
-  # text: Buy me a cup of coffee ☕.
+  text: Buy me a cup of coffee ☕.
 
   # Payment Methods
   # qrcode, url and text must be set at least one
-  # wechat, alipay, paypal and bitcoin has a built-in icon,
+  # wechat, alipay, paypal and bitcoin has built-in icon and color themes,
   # use `name` to apply
-  # methods:
-  #   - name: paypal
-  #     qrcode: paypal.jpg
-  #     url: https://paypal.me/imelmore
-  #     text: This is a paypal payment link
-  #     color: '#09bb07'
+  methods:
+    - name: alipay
+      qrcode: images/alipay.jpg
+      url: HTTPS://QR.ALIPAY.COM/FKX05716C2W52Z0LVPDO97
+      text: This is a ALIPAY link
+
+    - name: wechat
+      qrcode: images/wechat_pay.jpg
+      text: This is a Wechat Pay qrcode
 
 # Copyright notice
 # It is possible to use front matter `copyright` to override this setting.
 copyright:
   # Display author, default to `true`
-  # author: true
+  author: true
 
   # Display link, default to `true`
-  # link: false
+  link: true
 
-  # license: Attribution-NonCommercial-NoDerivatives 4.0 International
-  #   (<a href=\"https://creativecommons.org/licenses/by-nc-sa/4.0/\"
-  #   rel=\"external nofollow\" target=\"_blank\">CC BY-NC-ND 4.0</a>)
+  license: Attribution-NonCommercial-NoDerivatives 4.0 International
+    (<a href=\"https://creativecommons.org/licenses/by-nc-sa/4.0/\"
+    rel=\"external nofollow\" target=\"_blank\">CC BY-NC-ND 4.0</a>)
 
   # Display published date, default to `false`
   # published: false
@@ -286,12 +296,12 @@ copyright:
 # Built-in support Disqus (https://disqus.com) and LiveRe (https://livere.com),
 # for other comment system, see plugins
 comments:
-  # disqus:
-  #   shortname: disqus_shortname
-  #   # Or you can set disqus script URL directly
-  #   script: //disqus_shortname.disqus.com/embed.js
-  #   # Autoload, default to `true`, set to `false` to display a button
-  #   autoload: false
+  disqus:
+    shortname: marshou
+    # Or you can set disqus script URL directly
+    script: //marshou.disqus.com/embed.js
+    # Autoload, default to `true`, set to `false` to display a button
+    autoload: true
 
   # livere:
   #   uid: livere_uid
@@ -384,13 +394,20 @@ pwa:
 # ```bash
 # npm install babel-core babel-preset-env html-minifier uglify-js --save
 # ```
-# plugins:
-#   # Dynamic inject html snippet
-#   - position: # `sidebar` | `post` | `page` | `comments` | `avatar`, can be an array
+plugins:
+  # Dynamic inject html snippet
+  - position: sidebar
+  # `sidebar` | `post` | `page` | `comments` | `avatar`, can be an array
 
-#     # HTML code
-#     template: |
-#       <script>...</script>
+    # HTML code
+    template: |
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <ins class="adsbygoogle"
+          style="display:inline-block;width:250px;height:250px"
+          data-ad-client="ca-pub-3237083861034191"
+          data-ad-slot="1234567890"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
 #     # Or a path relative to theme folder
 #     template: snippets/snippet-1.html
 
