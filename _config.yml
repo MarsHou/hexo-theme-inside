@@ -330,12 +330,12 @@ data_dir:
 favicon:
 
 # Google analytics
-# ga: UA-00000000-0
+ga: UA-146089716-1
 
 # SEO
 seo:
   # Render structured-data in <head>, default to `false`
-  # structured_data: true
+  structured_data: true
 
 # PWA
 pwa:
@@ -396,20 +396,29 @@ pwa:
 # ```
 plugins:
   # Dynamic inject html snippet
-  - position: sidebar
+  - position: post
   # `sidebar` | `post` | `page` | `comments` | `avatar`, can be an array
 
     # HTML code
     template: |
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-      <ins class="adsbygoogle"
-          style="display:inline-block;width:250px;height:250px"
-          data-ad-client="ca-pub-3237083861034191"
-          data-ad-slot="1234567890"></ins>
-      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-3237083861034191",
+        enable_page_level_ads: true
+        });
+      </script>
+    # # HTML code
+    # template: |
+    #   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    #   <ins class="adsbygoogle"
+    #       style="display:inline-block;width:250px;height:250px"
+    #       data-ad-client="ca-pub-3237083861034191"
+    #       data-ad-slot="1234567890"></ins>
+    #   <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
 #     # Or a path relative to theme folder
-#     template: snippets/snippet-1.html
+    # template: snippets/snippet-1.html
 
 #   # Global Inject scripts/styles
 #   # scripts will be injected into <body>, and styles will be injected into <head>
