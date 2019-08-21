@@ -240,8 +240,8 @@ search:
 # `![cat](images/cat.gif)` will convert to
 # <img src="https://cdn.example.com/images/cat.gif?m=webp&q=80" alt="cat">
 assets:
-  # prefix: 'https://cdn.example.com'
-  # suffix: '?m=webp&q=80'
+  prefix: 'https://marshou.github.io/post'
+  suffix: '?m=webp&q=80'
 
 # Table of content, enabled by default, set to `false` to disable.
 toc:
@@ -316,7 +316,7 @@ comments:
 # ---------------------------------------------------------------
 
 # URL prefix for theme statics
-static_prefix:
+static_prefix: 
 
 # URL prefix for json data
 # If your json file is put in a cdn server,
